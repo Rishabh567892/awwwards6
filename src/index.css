@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/Fonts/Helvetica.ttf');
+}
+
+@font-face {
+  font-family: 'Reckless';
+  src: url('/Fonts/Reckless.ttf');
+}
+
+@font-face {
+  font-family: 'Italic';
+  src: url('/Fonts/Reckless-Italic.ttf');
+}
