@@ -6,8 +6,8 @@ let variants = {
   hover: { rotate: '135deg' }
 }
 
-const SidePanel = ({ sidePanelContent = null }) => {
-  return sidePanelContent ? (
+const SidePanel = ({ panelContent = null }) => {
+  return panelContent ? (
     <motion.div
       className="h-screen w-screen flex flex-row-reverse items-end fixed top-0 right-0 z-[7]"
       initial={{ opacity: 0, x: "100%" }}
@@ -16,7 +16,7 @@ const SidePanel = ({ sidePanelContent = null }) => {
       transition={{ duration: 1 }}
     >
 
-      <div className="relative z-[2] min-h-screen w-fit">{sidePanelContent}</div>
+      <div className="relative z-[2] min-h-screen w-fit">{panelContent}</div>
 
       <Link to="/">
         <motion.button className="relative z-[2] bg-white p-3 m-3.5 rounded-md cursor-pointer" initial='initial' whileHover='hover'>

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './Components/Header/Header'
 import { Provider } from '../useAppContext';
 import Home from './Components/Home/Home';
@@ -9,13 +8,15 @@ import { AnimatePresence } from 'framer-motion';
 import About from './Components/About/About';
 import Project from './Components/Projects/Project';
 import Archives from './Components/Archives/Archives';
+import StartProject from './Components/StartProject/StartProject';
 
 let paths = {
   "/": null,
   "/menu": <Navigation />,
   "/about": <About />,
   "/works/:project": <Project />,
-  "/archieves": <Archives />
+  "/archives": <Archives />,
+  "/start-a-project": <StartProject />
 }
 
 const App = () => {
@@ -32,7 +33,7 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           {
             Object.keys(paths).map((v, i) => {
-              return <Route key={i} path={v.replace(" ", "-")} element={<SidePanel key={i} sidePanelContent={paths[v]} />} />
+              return <Route key={i} path={v.replace(" ", "-")} element={<SidePanel key={i} panelContent={paths[v]} />} />
             })
           }
         </Routes>

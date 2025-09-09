@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
-const Card = ({ index, name, type }) => {
+const Card = ({ index, name, type, color }) => {
 
   let imgStyles = "h-8 aspect-square rounded-full overflow-hidden object-cover"
 
@@ -19,7 +19,7 @@ const Card = ({ index, name, type }) => {
 
       <motion.p
         ref={indexRef}
-        className="text-white"
+        className={`text-[${color}]`}
         variants={{
           initial: { width: "20%" },
           hover: { width: "10%" }
@@ -27,8 +27,8 @@ const Card = ({ index, name, type }) => {
         transition={{ duration: .5 }}
       >({String(index).padStart(2, '0')})</motion.p>
 
-      <p className="text-white" style={{ width: parentWidth / 4 }}>{name}</p>
-      <p style={{ width: parentWidth / 4 }}>{type}</p>
+      <p className={`text-[${color}]`} style={{ width: parentWidth / 3 }}>{name}</p>
+      <p style={{ width: parentWidth / 3 }}>{type}</p>
 
       <motion.div
         className="flex gap-2 justify-end origin-right"
@@ -40,7 +40,7 @@ const Card = ({ index, name, type }) => {
       >
         {
           [...Array(3)].map((_, i) => {
-            return <img key={i} src={`/Images/${name.replace(" ", "_")}/${i + 1}.webp`} alt="" className={imgStyles} />
+            return <img key={i} src={`/Images/${name.split(" ").join("_")}/${i + 1}.webp`} alt="" className={imgStyles} />
           })
         }
       </motion.div>

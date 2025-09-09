@@ -1,6 +1,6 @@
 import Anchor from './Anchor'
 
-let links = ["projects", "about", "archieves", "start a project", "contact"]
+let links = ["projects", "about", "archives", "start a project", "contact"]
 
 const Navigation = () => {
   return (

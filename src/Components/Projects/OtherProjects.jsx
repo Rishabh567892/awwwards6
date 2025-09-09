@@ -18,7 +18,7 @@ const OtherProjects = ({ name, projects }) => {
             if (v.name !== name) {
               index++;
               return <Link to={`/works/${v.name.replace(" ", "-")}`}>
-                <Card key={i} index={index} type={v.type} name={v.name} />
+                <Card key={i} index={index} type={v.type} name={v.name} color="white" />
               </Link>
             } else {
               return null
