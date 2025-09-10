@@ -26,9 +26,11 @@ const App = () => {
   return (
     <div className="relative min-h-screen w-screen bg-[#101010] text-white font-['Helvetica']">
 
-      <div className="bg-[linear-gradient(#fff,#fff)]"></div>
+      {/* temporary tailwindcss styles */}
+      <div className="to-[#000] from-[#000]"></div>
 
       <Header />
+
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           {
@@ -38,6 +40,7 @@ const App = () => {
           }
         </Routes>
       </AnimatePresence>
+
       <Home />
     </div>
   )

@@ -10,7 +10,7 @@ const Intro = ({ name, text, border = false, animated = "#000" }) => {
       <p className="text-2xl w-full leading-6.5 text-zinc-400">
         {splitText[0] ?
           <motion.span
-            className={`bg-clip-text text-transparent self-end bg-[linear-gradient(${animated},${animated})] bg-size-[0%_100%] bg-no-repeat mr-1`}
+            className={`bg-clip-text text-transparent self-end bg-linear-to-r from-[${animated}] to-[${animated}] bg-size-[0%_100%] bg-no-repeat mr-1`}
             initial={{ backgroundSize: "0% 100%" }}
             animate={{ backgroundSize: "100% 100%" }}
             transition={{ duration: 1, delay: 1.5 }}
