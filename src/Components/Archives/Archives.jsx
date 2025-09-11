@@ -1,6 +1,6 @@
 import Card from "../Card"
 import Intro from "../Intro"
-import ArchivesData from "./ArchivesData"
+import archivesData from "./archivesData"
 
 const Archives = () => {
   return (
@@ -9,7 +9,7 @@ const Archives = () => {
         name={<>The archieves<sup>(15)</sup></>}
         text="??A space for exploration, creative concepts the never saw light and work-in-progress ideas"
       />
-      {ArchivesData.map((v, i) => {
+      {archivesData.map((v, i) => {
         return <Card key={i} index={i+1} name={v.name} type={v.type} color="#000" />
       })}
     </div>
